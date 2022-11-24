@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  width: 100%;
-  max-width: 40rem;
+  width: 40rem;
+  margin-top:1.5rem;
   background: #ebfeff;
   border-radius: 1rem;
   border: 2px solid #0085a3;
@@ -17,6 +17,10 @@ export const Wrapper = styled.div`
 
   .text-primary {
     font-size: 1.8rem;
+  }
+
+  @media (max-width:31.25em){
+    width:calc(100% - 2rem);
   }
 `;
 

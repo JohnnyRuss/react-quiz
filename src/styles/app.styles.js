@@ -9,7 +9,6 @@ export const GlobalStyles = createGlobalStyle`
     body{
         background: url('./assets/summer.jpg');
         background-size: cover;
-        padding: 0 2rem;
         margin:0;
         display: flex;
         justify-content: center;
