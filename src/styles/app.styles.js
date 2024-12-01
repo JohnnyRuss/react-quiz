@@ -1,67 +1,67 @@
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
+    *,
+    *::before,
+    *::after{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      user-select: none;
+      -ms-user-select: none;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
     html{
-        height:100%;
-        font-size:62.5%;
+      height:100%;
+      font-size:62.5%;
     }
 
     body{
-        background: url('./assets/summer.jpg');
-        background-size: cover;
-        margin:0;
-        display: flex;
-        justify-content: center;
+      background: url('./assets/bg.webp');
+      background-size: cover;
+      font-family: "Open Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-variation-settings:"width" 100;
     }
 
-    *{
-        box-sizing: border-box;
+    .btn{
+      cursor: pointer;
+      background: linear-gradient(120deg, #945c42ff, #e79471ff);
+      border: 2px solid rgba(148,92,66,0.5);
+      box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+      border-radius: 1rem;
+      margin: 2rem 0;
+      height: 4.875rem;
+      padding: 0 4rem;
+      color:#fff;
+      letter-spacing: 1px;
+      font-size: 16px;
+      transition: all 0.3s ease;
+      pointer-events: all;
+
+      &:hover{
+        border-color: rgba(148,92,66,0.8);
+        transform: translateY(-3px);
+      }
+
+      &:disabled{
+        opacity: 0.5;
+        pointer-events: none;
+      }
     }
-`;
 
-export const Wrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .title {
-    background: linear-gradient(180deg, #fff, #87f1ff);
-    background-size: 100%;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    filter: drop-shadow(2px 2px #0085a3);
-    font-weight: 400;
-    margin: 2rem;
-    font-size: 7rem;
-    text-align: center;
-    text-transform: capitalize;
-  }
-
-  .message {
-    color: #fff;
-  }
-
-  .score {
-    font-size: 3.2rem;
-    margin: 0;
-  }
-
-  .start,
-  .next {
-    cursor: pointer;
-    background: linear-gradient(180deg, #fff, #ffcc91);
-    border: 2px solid #d38558;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 1rem;
-    margin: 2rem 0;
-    height: 4rem;
-    padding: 0 4rem;
-  }
-
-  .start {
-    max-width: 20rem;
-  }
+    .message {
+      color: #fff;
+    }
+    
+    .loading-text{
+      font-size: 20px;
+      color:#fff;
+      padding-top: 40px;
+    }
 `;
